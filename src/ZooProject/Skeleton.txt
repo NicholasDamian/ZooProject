@@ -1,0 +1,23 @@
+Classes
+
+
+Main
+
+Menu
+    User Input to create people or Animals and keep doing that until told otherwise
+    (needs asked which of the species they want to create)
+    Show the lists stored in Zoo
+    Exit the program
+Zoo
+    Animal ArrayList
+    People ArrayList
+    Stores the objects created
+    Lists the objects created
+Person
+    Visitor
+    Employee
+Animal (constructor is it nice)
+    Alligator (How many feet long is it.) double
+    Gorilla (Weight in pounds.) double
+    Penguin (does it have happy feet) boolean
+    create an enum that shows the location of the Species
