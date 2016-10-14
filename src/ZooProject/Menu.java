@@ -9,9 +9,11 @@ public class Menu {
         int menuOption;
         Scanner enter = new Scanner(System.in);
         Zoo z = new Zoo();
-        Alligator a = new Alligator(true,"hi",10);
-        Gorilla g = new Gorilla(true,"hi",10);
-        Penguin p = new Penguin(true,"hi",true);
+        Alligator a = new Alligator("hi",true,"hi",5);
+//        fixed
+        Gorilla g = new Gorilla("hi",true,"hi",10);
+
+        Penguin p = new Penguin("hi",true,"hi",true);
         Visitor v = new Visitor("hi",true);
         Employee e =new Employee("g","hi");
 

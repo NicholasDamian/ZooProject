@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Penguin extends Animal {
     Scanner enter = new Scanner(System.in);
     boolean happyFeet;
-    public Penguin(boolean n,String na, boolean f){
-        super(n,na);
+    public Penguin(String gl,boolean n,String na, boolean f){
+        super(n,na,gl);
         setHappyFeet(f);
     }
     void setHappyFeet(boolean f){
@@ -17,6 +17,7 @@ public class Penguin extends Animal {
     }
 
     void createAnimal(){
+        getLocation();
         String objectName;
         boolean objectNice;
         boolean objectHappyFeet;
@@ -26,8 +27,13 @@ public class Penguin extends Animal {
         objectNice = enter.nextBoolean();
         System.out.println("Does the Penguin have happy feet? true of false");
         objectHappyFeet = enter.nextBoolean();
-        Penguin object = new Penguin(objectNice,objectName,objectHappyFeet);
+        Penguin object = new Penguin(location,objectNice,objectName,objectHappyFeet);
         AnimalList.add(object.showInfo());
+    }
+
+    public String getLocation(){
+        location = Exhibits.PENGUIN.getLocation();
+        return location;
     }
 
     public String showInfo() {

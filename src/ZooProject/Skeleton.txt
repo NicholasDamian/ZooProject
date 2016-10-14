@@ -25,6 +25,4 @@ Animal (constructor is it nice)
 
 
 
-    @First I have to create a allergator to be able to use the createAllergator method which is odd but not really a problem
-
-    of course show info would need to be a poly method in each class/constructor
+I need to organize the enum call to diplay the information correctly

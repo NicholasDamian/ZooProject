@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Gorilla extends Animal {
     Scanner enter = new Scanner(System.in);
     double weight;
-    public Gorilla(boolean n,String na, double w){
-        super(n,na);
+    public Gorilla(String gl,boolean n,String na, double w){
+        super(n,na,gl);
         setWeight(w);
     }
     void setWeight(double w){
@@ -17,6 +17,7 @@ public class Gorilla extends Animal {
     }
 
     void createAnimal(){
+        getLocation();
         String objectName;
         boolean objectNice;
         double objectWeight;
@@ -27,8 +28,12 @@ public class Gorilla extends Animal {
         System.out.println("What is the weight of the Gorilla in pounds");
         objectWeight = enter.nextDouble();
         enter.nextLine();
-        Gorilla object = new Gorilla(objectNice,objectName,objectWeight);
+        Gorilla object = new Gorilla(location,objectNice,objectName,objectWeight);
         AnimalList.add(object.showInfo());
+    }
+    public String getLocation(){
+        location = Exhibits.GORILLA.getLocation();
+        return location;
     }
 
     public String showInfo() {

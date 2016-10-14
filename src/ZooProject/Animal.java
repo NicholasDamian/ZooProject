@@ -8,9 +8,14 @@ import java.util.ArrayList;
 public class Animal extends Zoo{
     boolean isItNice;
     String name;
-    public Animal(boolean n,String na){
+    String location;
+    public Animal(boolean n,String na,String gl){
         setIsItNice(n);
         setName(na);
+        setLocation(gl);
+    }
+    void setLocation(String l){
+        location = l;
     }
     void setIsItNice(boolean n){
         isItNice = n;
@@ -21,8 +26,15 @@ public class Animal extends Zoo{
     void createAnimal(){
     }
     public String showInfo(){
-        return "Is it Nice?: " + isItNice +"\n" +
+        return "Location: "+ location + "\n"+
+                "Is it Nice?: " + isItNice +"\n" +
                 "Name: " + name + "\n";
 
+    }
+
+
+
+    public String getLocation(String gl){
+        return location;
     }
 }

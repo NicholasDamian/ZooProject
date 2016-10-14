@@ -13,14 +13,15 @@ public class Alligator extends Animal {
 //    double objectLength;
 
 
-    public Alligator(boolean n,String na,double l){
-        super(n,na);
+    public Alligator(String gl,boolean n,String na,double l){
+        super(n,na,gl);
         setLength(l);
     }
     void setLength(double l){
         length = l;
     }
     void createAnimal(){
+        getLocation();
         String objectName;
         boolean objectNice;
         double objectLength;
@@ -31,8 +32,13 @@ public class Alligator extends Animal {
         System.out.println("What is the length of the Alligator in feet");
         objectLength = enter.nextDouble();
         enter.nextLine();
-        Alligator object = new Alligator(objectNice,objectName,objectLength);
+        Alligator object = new Alligator(location,objectNice,objectName,objectLength);
         AnimalList.add(object.showInfo());
+    }
+
+    public String getLocation(){
+        location = Exhibits.ALLIGATOR.getLocation();
+        return location;
     }
 
     public String showInfo(){
